@@ -1,8 +1,14 @@
 #Import Modules
+import os 
 
+
+#Find Current Dir
+dir_path = os.path.dirname(os.path.realpath(__file__))
+resultsBackupFile=dir_path+'\\ResultsBackup.txt'
+resultsFile=dir_path+'\\Results.txt'
 
 #Import Save File
-with open(r'C:\Users\Isaac.LAPTOP-KA6VL0F5\Documents\GitHub\factorAlgorithm\v2\ResultsBackup.txt') as f:
+with open(resultsBackupFile) as f:
     results=f.readlines()
 
 results = [x.strip() for x in results]
@@ -39,7 +45,7 @@ while consecutive_factors==False:
             consecutive_factors=False
 
     #Counter
-    if k>=100:
+    if k>=500:
         print(current_number)
         k=1
     else:
@@ -61,6 +67,6 @@ results.append(new_result)
 
 
 #Export Save File
-with open(r'C:\Users\Isaac.LAPTOP-KA6VL0F5\Documents\GitHub\factorAlgorithm\v2\Results.txt','w') as f:
+with open(resultsFile,'w') as f:
         for result in results:
             f.write(f"{result}\n")
