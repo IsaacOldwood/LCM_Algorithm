@@ -16,3 +16,9 @@ What is the fastest way to find these numbers?
 Hence the different algorithms!
 
 Enjoy!
+
+
+Until commit a37ffc08f26a8de64ec5494fc2cf7c42d113046e I have been looking at the problem the wrong way.
+I have been picking a number and checking if it has consecutive factors.
+
+Instead i should be picking integer numbers and finding the LCM!
