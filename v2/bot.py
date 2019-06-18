@@ -2,7 +2,7 @@
 
 
 #Import Save File
-with open(r'C:\Users\Isaac.LAPTOP-KA6VL0F5\Documents\GitHub\factorAlgorithm\v1\ResultsBackup.txt') as f:
+with open(r'C:\Users\Isaac.LAPTOP-KA6VL0F5\Documents\GitHub\factorAlgorithm\v2\ResultsBackup.txt') as f:
     results=f.readlines()
 
 results = [x.strip() for x in results]
@@ -36,7 +36,11 @@ while consecutive_factors==False:
             pass
         else:
             consecutive_factors=False
-            current_number+=1
+            
+    if consecutive_factors==False:
+        current_number+=1
+
+
 
     
 
@@ -46,11 +50,12 @@ if consecutive_factors==True:
     print(new_result)
 
 
+
 #Add new result to results
 results.append(new_result)
 
 
 #Export Save File
-with open(r'C:\Users\Isaac.LAPTOP-KA6VL0F5\Documents\GitHub\factorAlgorithm\v1\Results.txt','w') as f:
+with open(r'C:\Users\Isaac.LAPTOP-KA6VL0F5\Documents\GitHub\factorAlgorithm\v2\Results.txt','w') as f:
         for result in results:
             f.write(f"{result}\n")
