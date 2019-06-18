@@ -18,9 +18,9 @@ current_number=int(current_number)
 
 
 #Algorithim
+k=1
 consecutive_factors=False
 while consecutive_factors==False:
-    print(f'Current Number; {current_number}')
     factors=[1] #1 is always a factor
     
     for i in range(2,(current_number)): #Test All Possible Numbers
@@ -32,12 +32,18 @@ while consecutive_factors==False:
     
     #Check If Factors are consecutive
     consecutive_factors=True
-    print(factors)
     for j in range(1,(number_of_results+2)):
         if j in factors:
             pass
         else:
             consecutive_factors=False
+
+    #Counter
+    if k>=100:
+        print(current_number)
+        k=1
+    else:
+        k+=1
             
     if consecutive_factors==False:
         current_number+=1
